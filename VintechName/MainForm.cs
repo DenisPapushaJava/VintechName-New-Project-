@@ -71,7 +71,9 @@ namespace NewProject
 			string NFD;                                             //Основа имени папки и файла
 			string nameDayFolder;                                   //Имя папки дня
 			string nameAplication;                                  //Имя для проекта Vintech
+			
 			bool check = false;                                     //Флаг проверки возможности создания новой папки и файла
+
 
 			if (day.Length == 1)
 			{
@@ -109,7 +111,8 @@ namespace NewProject
 				{
 					NFD = $"{nameDayFolder}-{hours}{minutes}";
 				}
-				nameAplication = $"{textBox_thinkess.Text} мм  {NFD}--{(comboBox_Cut.Text).ToUpper()}.rcam";
+
+				nameAplication = $"{textBox_thinkess.Text} {(comboBox_Cut.SelectedIndex == 3 ? "mm" : "мм")}  {NFD}--{(comboBox_Cut.Text).ToUpper()}.{(comboBox_Cut.SelectedIndex == 3 ? "Dsp" : "rcam")}";
 
 				if (!Directory.Exists(nameDayFolder))
 				{
@@ -211,5 +214,23 @@ namespace NewProject
 			pictureBox_Close.Location = new Point(pictureBox_Close.Location.X - 3, pictureBox_Close.Location.Y - 3);
 
 		}
-	}
+
+        private void comboBox_Cut_SelectedIndexChanged(object sender, EventArgs e)
+        {
+			if (comboBox_Cut.SelectedIndex == 3)
+			{
+				pictureBox_Vintech.Visible = false;
+				pictureBox_Metalix.Visible = true;
+				panel_Top.BackColor = Color.DarkSlateGray;
+				pictureBox_Close.BackColor = panel_Top.BackColor;
+			}
+			else
+			{
+                pictureBox_Vintech.Visible = true;
+                pictureBox_Metalix.Visible = false;
+                panel_Top.BackColor = SystemColors.HotTrack;
+                pictureBox_Close.BackColor = panel_Top.BackColor;
+            }
+        }
+    }
 }
