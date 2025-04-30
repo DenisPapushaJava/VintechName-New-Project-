@@ -14,12 +14,12 @@ namespace NewProject
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel panel_Top;
 		private System.Windows.Forms.Label label_Head;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button button_Ok;
-		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.PictureBox pictureBox_Vintech;
 		private System.Windows.Forms.PictureBox pictureBox_Close;
 		
 		/// <summary>
@@ -44,9 +44,9 @@ namespace NewProject
 		private void InitializeComponent()
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel_Top = new System.Windows.Forms.Panel();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox_Vintech = new System.Windows.Forms.PictureBox();
             this.label_Head = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -54,22 +54,25 @@ namespace NewProject
             this.textBox_thinkess = new System.Windows.Forms.TextBox();
             this.comboBox_Cut = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.pictureBox_Metalix = new System.Windows.Forms.PictureBox();
+            this.panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).BeginInit();
             this.SuspendLayout();
             // 
-            // panel1
+            // panel_Top
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.panel1.Controls.Add(this.pictureBox_Close);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label_Head);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(300, 40);
-            this.panel1.TabIndex = 0;
+            this.panel_Top.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel_Top.Controls.Add(this.pictureBox_Metalix);
+            this.panel_Top.Controls.Add(this.pictureBox_Close);
+            this.panel_Top.Controls.Add(this.pictureBox_Vintech);
+            this.panel_Top.Controls.Add(this.label_Head);
+            this.panel_Top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel_Top.Location = new System.Drawing.Point(0, 0);
+            this.panel_Top.Name = "panel_Top";
+            this.panel_Top.Size = new System.Drawing.Size(300, 40);
+            this.panel_Top.TabIndex = 0;
             // 
             // pictureBox_Close
             // 
@@ -93,20 +96,20 @@ namespace NewProject
             this.pictureBox_Close.MouseEnter += new System.EventHandler(this.pictureBox_Close_MouseEnter);
             this.pictureBox_Close.MouseLeave += new System.EventHandler(this.pictureBox_Close_MouseLeave);
             // 
-            // pictureBox1
+            // pictureBox_Vintech
             // 
-            this.pictureBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(196, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(25, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox_Vintech.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.pictureBox_Vintech.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.pictureBox_Vintech.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Vintech.BackgroundImage")));
+            this.pictureBox_Vintech.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_Vintech.ErrorImage = null;
+            this.pictureBox_Vintech.InitialImage = null;
+            this.pictureBox_Vintech.Location = new System.Drawing.Point(196, 8);
+            this.pictureBox_Vintech.Name = "pictureBox_Vintech";
+            this.pictureBox_Vintech.Size = new System.Drawing.Size(25, 25);
+            this.pictureBox_Vintech.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Vintech.TabIndex = 1;
+            this.pictureBox_Vintech.TabStop = false;
             // 
             // label_Head
             // 
@@ -122,7 +125,7 @@ namespace NewProject
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(24, 80);
+            this.label1.Location = new System.Drawing.Point(15, 80);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 32);
             this.label1.TabIndex = 0;
@@ -187,21 +190,39 @@ namespace NewProject
             this.comboBox_Cut.Items.AddRange(new object[] {
             "Лазер",
             "Плазма",
-            "Газо-кислородная"});
-            this.comboBox_Cut.Location = new System.Drawing.Point(139, 123);
+            "Газо-кислородная",
+            "HansLaser"});
+            this.comboBox_Cut.Location = new System.Drawing.Point(119, 123);
             this.comboBox_Cut.Name = "comboBox_Cut";
-            this.comboBox_Cut.Size = new System.Drawing.Size(149, 27);
+            this.comboBox_Cut.Size = new System.Drawing.Size(169, 27);
             this.comboBox_Cut.TabIndex = 2;
+            this.comboBox_Cut.SelectedIndexChanged += new System.EventHandler(this.comboBox_Cut_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(24, 124);
+            this.label3.Location = new System.Drawing.Point(15, 124);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Тип резки:";
+            // 
+            // pictureBox_Metalix
+            // 
+            this.pictureBox_Metalix.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.pictureBox_Metalix.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox_Metalix.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Metalix.BackgroundImage")));
+            this.pictureBox_Metalix.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_Metalix.ErrorImage = null;
+            this.pictureBox_Metalix.InitialImage = null;
+            this.pictureBox_Metalix.Location = new System.Drawing.Point(187, 0);
+            this.pictureBox_Metalix.Name = "pictureBox_Metalix";
+            this.pictureBox_Metalix.Size = new System.Drawing.Size(45, 40);
+            this.pictureBox_Metalix.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Metalix.TabIndex = 2;
+            this.pictureBox_Metalix.TabStop = false;
+            this.pictureBox_Metalix.Visible = false;
             // 
             // MainForm
             // 
@@ -217,7 +238,7 @@ namespace NewProject
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel_Top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -228,9 +249,10 @@ namespace NewProject
             this.Text = "NewProject";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.panel1.ResumeLayout(false);
+            this.panel_Top.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +261,7 @@ namespace NewProject
         private System.Windows.Forms.TextBox textBox_thinkess;
         private System.Windows.Forms.ComboBox comboBox_Cut;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox_Metalix;
     }
 	}
 
