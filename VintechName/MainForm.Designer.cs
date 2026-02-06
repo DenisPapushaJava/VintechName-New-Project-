@@ -55,15 +55,18 @@ namespace NewProject
             this.textBox_thinkess = new System.Windows.Forms.TextBox();
             this.comboBox_Cut = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox_Unimach = new System.Windows.Forms.PictureBox();
             this.panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Top
             // 
             this.panel_Top.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel_Top.Controls.Add(this.pictureBox_Unimach);
             this.panel_Top.Controls.Add(this.pictureBox_Metalix);
             this.panel_Top.Controls.Add(this.pictureBox_Close);
             this.panel_Top.Controls.Add(this.pictureBox_Vintech);
@@ -207,7 +210,8 @@ namespace NewProject
             "Лазер",
             "Плазма",
             "Газо-кислородная",
-            "HansLaser"});
+            "HansLaser",
+            "Труборез"});
             this.comboBox_Cut.Location = new System.Drawing.Point(119, 123);
             this.comboBox_Cut.Name = "comboBox_Cut";
             this.comboBox_Cut.Size = new System.Drawing.Size(169, 27);
@@ -223,6 +227,22 @@ namespace NewProject
             this.label3.Size = new System.Drawing.Size(106, 32);
             this.label3.TabIndex = 0;
             this.label3.Text = "Тип резки:";
+            // 
+            // pictureBox_Unimach
+            // 
+            this.pictureBox_Unimach.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.pictureBox_Unimach.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Unimach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Unimach.BackgroundImage")));
+            this.pictureBox_Unimach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_Unimach.ErrorImage = null;
+            this.pictureBox_Unimach.InitialImage = null;
+            this.pictureBox_Unimach.Location = new System.Drawing.Point(170, 0);
+            this.pictureBox_Unimach.Name = "pictureBox_Unimach";
+            this.pictureBox_Unimach.Size = new System.Drawing.Size(89, 40);
+            this.pictureBox_Unimach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Unimach.TabIndex = 3;
+            this.pictureBox_Unimach.TabStop = false;
+            this.pictureBox_Unimach.Visible = false;
             // 
             // MainForm
             // 
@@ -253,6 +273,7 @@ namespace NewProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -262,6 +283,7 @@ namespace NewProject
         private System.Windows.Forms.ComboBox comboBox_Cut;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox_Metalix;
+        private System.Windows.Forms.PictureBox pictureBox_Unimach;
     }
 	}
 
