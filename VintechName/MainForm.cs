@@ -141,7 +141,7 @@ namespace NewProject
 
 				string cutType = comboBox_Cut.Text.ToUpper();
 
-                nameAplication = $"{thickness} {unit} {NFD}--{cutType}.{extension}";
+                nameAplication = $"{thickness} {unit} {NFD}--{cutType}.{extension}".Trim();
 
                 if (!Directory.Exists(nameDayFolder))
 				{
