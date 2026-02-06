@@ -148,7 +148,7 @@ namespace NewProject
 
 					Directory.CreateDirectory($@"{nameDayFolder}\{NFD}");
 					File.Create($@"{nameDayFolder}\{NFD}\{nameAplication}");
-					Process.Start($@"{nameDayFolder}\{NFD}\{nameAplication}");
+					//Process.Start($@"{nameDayFolder}\{NFD}\{nameAplication}");
 					Application.Exit();
 				}
 			}
