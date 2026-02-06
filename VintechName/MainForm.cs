@@ -3,7 +3,6 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
-using System.Reflection.Emit;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -177,7 +176,7 @@ namespace NewProject
 
 					Directory.CreateDirectory($@"{nameDayFolder}\{NFD}");
 					File.Create($@"{nameDayFolder}\{NFD}\{nameAplication}");
-					//Process.Start($@"{nameDayFolder}\{NFD}\{nameAplication}");
+					Process.Start($@"{nameDayFolder}\{NFD}\{nameAplication}");
 					Application.Exit();
 				}
 			}
@@ -252,6 +251,8 @@ namespace NewProject
                 pictureBox_Unimach.Visible = false;
                 label1.Visible = true;
                 label2.Visible = true;
+				textBox_thinkess.Visible = true;
+                textBox_thinkess.Focus();
                 panel_Top.BackColor = Color.DarkSlateGray;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
 				pictureBox_Metalix.Visible = true;
@@ -262,7 +263,8 @@ namespace NewProject
 				pictureBox_Metalix.Visible = false;
 				label1.Visible = false;
 				label2.Visible = false;
-				panel_Top.BackColor = SystemColors.HotTrack;
+                textBox_thinkess.Visible = false;
+                panel_Top.BackColor = SystemColors.HotTrack;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
 				pictureBox_Unimach.Visible = true;
 			}
@@ -273,7 +275,9 @@ namespace NewProject
 				pictureBox_Unimach.Visible = false;
 				label1.Visible = true;
 				label2.Visible = true;
-				panel_Top.BackColor = SystemColors.HotTrack;
+                textBox_thinkess.Visible = true;
+                textBox_thinkess.Focus();
+                panel_Top.BackColor = SystemColors.HotTrack;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
 				pictureBox_Vintech.Visible = true;
 			}
