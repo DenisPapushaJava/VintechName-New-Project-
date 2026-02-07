@@ -73,9 +73,12 @@ namespace NewProject
 			string nameAplication;                                  //Имя для проекта Vintech
 			
 			bool check = false;                                     //Флаг проверки возможности создания новой папки и файла
+            string unit;           // "mm" или "мм"
+            string extension;       //расширение файла
+			string thickness = ""; 
 
 
-			if (day.Length == 1)
+            if (day.Length == 1)
 			{
 				day = $"0{day}";
 			}
@@ -89,7 +92,7 @@ namespace NewProject
 			}
 
 			button_Ok.Text = "OK";
-			if (textBox_thinkess.Text == "" || comboBox_Cut.Text == "")
+			if ((textBox_thinkess.Text == "" || comboBox_Cut.Text == "") && !(comboBox_Cut.SelectedIndex == 4))
 			{
 				Message mess = new Message();
 				var answer = mess.ShowDialog();
@@ -112,9 +115,34 @@ namespace NewProject
 					NFD = $"{nameDayFolder}-{hours}{minutes}";
 				}
 
-				nameAplication = $"{textBox_thinkess.Text} {(comboBox_Cut.SelectedIndex == 3 ? "mm" : "мм")}  {NFD}--{(comboBox_Cut.Text).ToUpper()}.{(comboBox_Cut.SelectedIndex == 3 ? "Dsp" : "rcam")}";
+                if (textBox_thinkess.Enabled)
+                {
+                    thickness = textBox_thinkess.Text.Trim();
+                }
 
-				if (!Directory.Exists(nameDayFolder))
+                //nameAplication = $"{textBox_thinkess.Text} {(comboBox_Cut.SelectedIndex == 3 ? "mm" : "мм")}  {NFD}--{(comboBox_Cut.Text).ToUpper()}.{(comboBox_Cut.SelectedIndex == 3 ? "Dsp" : "rcam")}";
+                if (comboBox_Cut.SelectedIndex == 3)
+                {
+                    unit = "mm";
+                    extension = "Dsp";
+                }
+				else if(comboBox_Cut.SelectedIndex == 4)
+				{
+					unit = "";
+					thickness = "";
+					extension = "aucb";
+				}
+                else
+                {
+                    unit = "мм";
+                    extension = "rcam";
+                }
+
+				string cutType = comboBox_Cut.Text.ToUpper();
+
+                nameAplication = $"{thickness} {unit} {NFD}--{cutType}.{extension}".Trim();
+
+                if (!Directory.Exists(nameDayFolder))
 				{
 					Directory.CreateDirectory(nameDayFolder);
 				}
@@ -220,17 +248,39 @@ namespace NewProject
 			if (comboBox_Cut.SelectedIndex == 3)
 			{
 				pictureBox_Vintech.Visible = false;
-				pictureBox_Metalix.Visible = true;
-				panel_Top.BackColor = Color.DarkSlateGray;
+                pictureBox_Unimach.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+				textBox_thinkess.Visible = true;
+                textBox_thinkess.Focus();
+                panel_Top.BackColor = Color.DarkSlateGray;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
+				pictureBox_Metalix.Visible = true;
 			}
+			else if (comboBox_Cut.SelectedIndex == 4)
+			{
+				pictureBox_Vintech.Visible = false;
+				pictureBox_Metalix.Visible = false;
+				label1.Visible = false;
+				label2.Visible = false;
+                textBox_thinkess.Visible = false;
+                panel_Top.BackColor = SystemColors.HotTrack;
+				pictureBox_Close.BackColor = panel_Top.BackColor;
+				pictureBox_Unimach.Visible = true;
+			}
+
 			else
 			{
-                pictureBox_Vintech.Visible = true;
-                pictureBox_Metalix.Visible = false;
+				pictureBox_Metalix.Visible = false;
+				pictureBox_Unimach.Visible = false;
+				label1.Visible = true;
+				label2.Visible = true;
+                textBox_thinkess.Visible = true;
+                textBox_thinkess.Focus();
                 panel_Top.BackColor = SystemColors.HotTrack;
-                pictureBox_Close.BackColor = panel_Top.BackColor;
-            }
+				pictureBox_Close.BackColor = panel_Top.BackColor;
+				pictureBox_Vintech.Visible = true;
+			}
         }
     }
 }
