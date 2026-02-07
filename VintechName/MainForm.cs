@@ -216,7 +216,7 @@ namespace NewProject
 				textBox_thinkess.AppendText(str.Replace(".", ","));
 			}
 		}
-		void pictureBox2_Click(object sender, EventArgs e)
+		void pictureBox_Close_Click(object sender, EventArgs e)
 		{
 			Close();
 		}

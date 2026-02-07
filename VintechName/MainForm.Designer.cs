@@ -45,6 +45,7 @@ namespace NewProject
 		{
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panel_Top = new System.Windows.Forms.Panel();
+            this.pictureBox_Unimach = new System.Windows.Forms.PictureBox();
             this.pictureBox_Metalix = new System.Windows.Forms.PictureBox();
             this.pictureBox_Close = new System.Windows.Forms.PictureBox();
             this.pictureBox_Vintech = new System.Windows.Forms.PictureBox();
@@ -55,12 +56,11 @@ namespace NewProject
             this.textBox_thinkess = new System.Windows.Forms.TextBox();
             this.comboBox_Cut = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox_Unimach = new System.Windows.Forms.PictureBox();
             this.panel_Top.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Top
@@ -76,6 +76,22 @@ namespace NewProject
             this.panel_Top.Name = "panel_Top";
             this.panel_Top.Size = new System.Drawing.Size(300, 40);
             this.panel_Top.TabIndex = 0;
+            // 
+            // pictureBox_Unimach
+            // 
+            this.pictureBox_Unimach.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.pictureBox_Unimach.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_Unimach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Unimach.BackgroundImage")));
+            this.pictureBox_Unimach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_Unimach.ErrorImage = null;
+            this.pictureBox_Unimach.InitialImage = null;
+            this.pictureBox_Unimach.Location = new System.Drawing.Point(170, 0);
+            this.pictureBox_Unimach.Name = "pictureBox_Unimach";
+            this.pictureBox_Unimach.Size = new System.Drawing.Size(89, 40);
+            this.pictureBox_Unimach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Unimach.TabIndex = 3;
+            this.pictureBox_Unimach.TabStop = false;
+            this.pictureBox_Unimach.Visible = false;
             // 
             // pictureBox_Metalix
             // 
@@ -110,7 +126,7 @@ namespace NewProject
             this.pictureBox_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox_Close.TabIndex = 1;
             this.pictureBox_Close.TabStop = false;
-            this.pictureBox_Close.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.pictureBox_Close.Click += new System.EventHandler(this.pictureBox_Close_Click);
             this.pictureBox_Close.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox_Close_MouseDown);
             this.pictureBox_Close.MouseEnter += new System.EventHandler(this.pictureBox_Close_MouseEnter);
             this.pictureBox_Close.MouseLeave += new System.EventHandler(this.pictureBox_Close_MouseLeave);
@@ -228,22 +244,6 @@ namespace NewProject
             this.label3.TabIndex = 0;
             this.label3.Text = "Тип резки:";
             // 
-            // pictureBox_Unimach
-            // 
-            this.pictureBox_Unimach.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
-            this.pictureBox_Unimach.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox_Unimach.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_Unimach.BackgroundImage")));
-            this.pictureBox_Unimach.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox_Unimach.ErrorImage = null;
-            this.pictureBox_Unimach.InitialImage = null;
-            this.pictureBox_Unimach.Location = new System.Drawing.Point(170, 0);
-            this.pictureBox_Unimach.Name = "pictureBox_Unimach";
-            this.pictureBox_Unimach.Size = new System.Drawing.Size(89, 40);
-            this.pictureBox_Unimach.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Unimach.TabIndex = 3;
-            this.pictureBox_Unimach.TabStop = false;
-            this.pictureBox_Unimach.Visible = false;
-            // 
             // MainForm
             // 
             this.AcceptButton = this.button_Ok;
@@ -270,10 +270,10 @@ namespace NewProject
             this.TopMost = true;
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.panel_Top.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
