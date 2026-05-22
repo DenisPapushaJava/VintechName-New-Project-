@@ -56,6 +56,9 @@ namespace NewProject
             this.textBox_thinkess = new System.Windows.Forms.TextBox();
             this.comboBox_Cut = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label_cristall = new System.Windows.Forms.Label();
+            this.toggleSwitch_cam = new VintechName.ToggleSwitch();
             this.panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).BeginInit();
@@ -187,7 +190,7 @@ namespace NewProject
             this.button_Ok.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_Ok.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button_Ok.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button_Ok.Location = new System.Drawing.Point(64, 180);
+            this.button_Ok.Location = new System.Drawing.Point(64, 189);
             this.button_Ok.Name = "button_Ok";
             this.button_Ok.Size = new System.Drawing.Size(168, 48);
             this.button_Ok.TabIndex = 2;
@@ -244,6 +247,54 @@ namespace NewProject
             this.label3.TabIndex = 0;
             this.label3.Text = "Тип резки:";
             // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(115, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(63, 20);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Vintech";
+            // 
+            // label_cristall
+            // 
+            this.label_cristall.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label_cristall.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label_cristall.Location = new System.Drawing.Point(226, 160);
+            this.label_cristall.Name = "label_cristall";
+            this.label_cristall.Size = new System.Drawing.Size(78, 20);
+            this.label_cristall.TabIndex = 7;
+            this.label_cristall.Text = "Кристалл";
+            // 
+            // toggleSwitch_cam
+            // 
+            this.toggleSwitch_cam.Appearance = System.Windows.Forms.Appearance.Button;
+            this.toggleSwitch_cam.AutoEllipsis = true;
+            this.toggleSwitch_cam.BackColor = System.Drawing.SystemColors.Highlight;
+            this.toggleSwitch_cam.BorderColor = System.Drawing.SystemColors.HotTrack;
+            this.toggleSwitch_cam.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.toggleSwitch_cam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.toggleSwitch_cam.DisabledOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(220)))));
+            this.toggleSwitch_cam.DisabledOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.toggleSwitch_cam.DisabledThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.toggleSwitch_cam.Enabled = false;
+            this.toggleSwitch_cam.FlatAppearance.BorderSize = 0;
+            this.toggleSwitch_cam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.toggleSwitch_cam.ForeColor = System.Drawing.Color.Transparent;
+            this.toggleSwitch_cam.Location = new System.Drawing.Point(177, 160);
+            this.toggleSwitch_cam.MaximumSize = new System.Drawing.Size(42, 20);
+            this.toggleSwitch_cam.MinimumSize = new System.Drawing.Size(24, 12);
+            this.toggleSwitch_cam.Name = "toggleSwitch_cam";
+            this.toggleSwitch_cam.OffColor = System.Drawing.SystemColors.MenuHighlight;
+            this.toggleSwitch_cam.OnColor = System.Drawing.SystemColors.MenuHighlight;
+            this.toggleSwitch_cam.Size = new System.Drawing.Size(42, 20);
+            this.toggleSwitch_cam.TabIndex = 5;
+            this.toggleSwitch_cam.TabStop = false;
+            this.toggleSwitch_cam.Text = "toggleSwitch1";
+            this.toggleSwitch_cam.ThumbColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.toggleSwitch_cam.UseVisualStyleBackColor = false;
+            // 
             // MainForm
             // 
             this.AcceptButton = this.button_Ok;
@@ -252,6 +303,9 @@ namespace NewProject
             this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(300, 250);
             this.ControlBox = false;
+            this.Controls.Add(this.label_cristall);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.toggleSwitch_cam);
             this.Controls.Add(this.comboBox_Cut);
             this.Controls.Add(this.textBox_thinkess);
             this.Controls.Add(this.button_Ok);
@@ -284,6 +338,9 @@ namespace NewProject
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox_Metalix;
         private System.Windows.Forms.PictureBox pictureBox_Unimach;
+        private VintechName.ToggleSwitch toggleSwitch_cam;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_cristall;
     }
 	}
 
