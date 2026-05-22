@@ -58,17 +58,20 @@ namespace NewProject
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label_cristall = new System.Windows.Forms.Label();
+            this.pictureBox_gar = new System.Windows.Forms.PictureBox();
             this.toggleSwitch_cam = new VintechName.ToggleSwitch();
             this.panel_Top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Unimach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gar)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_Top
             // 
             this.panel_Top.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.panel_Top.Controls.Add(this.pictureBox_gar);
             this.panel_Top.Controls.Add(this.pictureBox_Unimach);
             this.panel_Top.Controls.Add(this.pictureBox_Metalix);
             this.panel_Top.Controls.Add(this.pictureBox_Close);
@@ -230,7 +233,8 @@ namespace NewProject
             "Плазма",
             "Газо-кислородная",
             "HansLaser",
-            "Труборез"});
+            "Труборез",
+            "ГАР"});
             this.comboBox_Cut.Location = new System.Drawing.Point(119, 123);
             this.comboBox_Cut.Name = "comboBox_Cut";
             this.comboBox_Cut.Size = new System.Drawing.Size(169, 27);
@@ -266,6 +270,22 @@ namespace NewProject
             this.label_cristall.Size = new System.Drawing.Size(78, 20);
             this.label_cristall.TabIndex = 7;
             this.label_cristall.Text = "Кристалл";
+            // 
+            // pictureBox_gar
+            // 
+            this.pictureBox_gar.AccessibleRole = System.Windows.Forms.AccessibleRole.ScrollBar;
+            this.pictureBox_gar.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox_gar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox_gar.BackgroundImage")));
+            this.pictureBox_gar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox_gar.ErrorImage = null;
+            this.pictureBox_gar.InitialImage = null;
+            this.pictureBox_gar.Location = new System.Drawing.Point(170, 0);
+            this.pictureBox_gar.Name = "pictureBox_gar";
+            this.pictureBox_gar.Size = new System.Drawing.Size(89, 40);
+            this.pictureBox_gar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_gar.TabIndex = 4;
+            this.pictureBox_gar.TabStop = false;
+            this.pictureBox_gar.Visible = false;
             // 
             // toggleSwitch_cam
             // 
@@ -328,6 +348,7 @@ namespace NewProject
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Metalix)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Vintech)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_gar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -341,6 +362,7 @@ namespace NewProject
         private VintechName.ToggleSwitch toggleSwitch_cam;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label_cristall;
+        private System.Windows.Forms.PictureBox pictureBox_gar;
     }
 	}
 

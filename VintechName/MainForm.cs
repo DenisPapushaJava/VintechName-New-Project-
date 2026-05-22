@@ -132,6 +132,11 @@ namespace NewProject
 					thickness = "";
 					extension = "aucb";
 				}
+                else if (comboBox_Cut.SelectedIndex == 5)
+                {
+                    unit = "мм";
+                    extension = "dig";
+                }
                 else
                 {
 					if (toggleSwitch_cam.Checked) {   extension = "cry";  }
@@ -250,6 +255,7 @@ namespace NewProject
 			{
 				pictureBox_Vintech.Visible = false;
                 pictureBox_Unimach.Visible = false;
+                pictureBox_gar.Visible = false;
                 label1.Visible = true;
                 label2.Visible = true;
 				textBox_thinkess.Visible = true;
@@ -263,7 +269,8 @@ namespace NewProject
 			{
 				pictureBox_Vintech.Visible = false;
 				pictureBox_Metalix.Visible = false;
-				label1.Visible = false;
+                pictureBox_gar.Visible = false;
+                label1.Visible = false;
 				label2.Visible = false;
                 textBox_thinkess.Visible = false;
                 panel_Top.BackColor = SystemColors.HotTrack;
@@ -271,12 +278,26 @@ namespace NewProject
 				pictureBox_Unimach.Visible = true;
                 toggleSwitch_cam.Enabled = false;
             }
+            else if (comboBox_Cut.SelectedIndex == 5)
+            {
+                pictureBox_Metalix.Visible = false;
+                pictureBox_Unimach.Visible = false;
+                label1.Visible = true;
+                label2.Visible = true;
+                textBox_thinkess.Visible = true;
+                textBox_thinkess.Focus();
+                panel_Top.BackColor = SystemColors.HotTrack;
+                pictureBox_Close.BackColor = panel_Top.BackColor;
+                pictureBox_gar.Visible = true;
+                toggleSwitch_cam.Enabled = false;
+            }
 
 			else
 			{
 				pictureBox_Metalix.Visible = false;
 				pictureBox_Unimach.Visible = false;
-				label1.Visible = true;
+                pictureBox_gar.Visible = false;
+                label1.Visible = true;
 				label2.Visible = true;
                 textBox_thinkess.Visible = true;
                 textBox_thinkess.Focus();
