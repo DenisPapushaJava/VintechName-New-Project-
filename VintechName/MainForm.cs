@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
@@ -139,8 +138,7 @@ namespace NewProject
                 }
                 else
                 {
-					if (toggleSwitch_cam.Checked) {   extension = "cry";  }
-					else { extension = "rcam"; }
+					extension = "rcam"; 
                     unit = "мм";                    
                 }
 
@@ -263,7 +261,6 @@ namespace NewProject
                 panel_Top.BackColor = Color.DarkSlateGray;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
 				pictureBox_Metalix.Visible = true;
-				toggleSwitch_cam.Enabled = false;
 			}
 			else if (comboBox_Cut.SelectedIndex == 4)
 			{
@@ -276,7 +273,6 @@ namespace NewProject
                 panel_Top.BackColor = SystemColors.HotTrack;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
 				pictureBox_Unimach.Visible = true;
-                toggleSwitch_cam.Enabled = false;
             }
             else if (comboBox_Cut.SelectedIndex == 5)
             {
@@ -289,7 +285,6 @@ namespace NewProject
                 panel_Top.BackColor = SystemColors.HotTrack;
                 pictureBox_Close.BackColor = panel_Top.BackColor;
                 pictureBox_gar.Visible = true;
-                toggleSwitch_cam.Enabled = false;
             }
 
 			else
@@ -304,7 +299,6 @@ namespace NewProject
                 panel_Top.BackColor = SystemColors.HotTrack;
 				pictureBox_Close.BackColor = panel_Top.BackColor;
 				pictureBox_Vintech.Visible = true;
-                toggleSwitch_cam.Enabled = true;
             }
         }
     }
